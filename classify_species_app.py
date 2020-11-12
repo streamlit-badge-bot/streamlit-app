@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn import datasets
+import cv2
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
@@ -34,6 +35,7 @@ Y = iris.target
 clf = RandomForestClassifier()
 clf.fit(X, Y)
 
+
 prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
@@ -46,3 +48,11 @@ st.write(iris.target_names[prediction])
 
 st.subheader('Prediction Probability of Species')
 st.write(prediction_proba)
+
+
+image_placeholder = st.empty()
+if st.button('Start'):
+    video = cv2.VideoCapture('streamlit-classify_species_app-2020-11-12-19-11-39.webm')
+    while True:
+        success, image = video.read()
+        image_placeholder.image(image)
