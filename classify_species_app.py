@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn import datasets
-import cv2
+from cv2 import cv2
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
