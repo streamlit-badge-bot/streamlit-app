@@ -1,4 +1,4 @@
-# streamlit-app
+# streamlit-app [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/vinrok/streamlit-app/main/classify_species_app.py)
 A demo app to classify iris flower type using RandomForest classifier, shown using streamlit python library.
 
 ## Python libraries used in this app:
